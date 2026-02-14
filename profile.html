@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Profile - CareSync</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="mobile-container">
+
+        <div class="header">
+            <h2>👤 Profile</h2>
+            <button onclick="window.location.href='dashboard.html'"><i class="fas fa-arrow-left"></i></button>
+        </div>
+
+        <div class="content">
+            <div style="text-align: center; margin-bottom: 20px;">
+                <i class="fas fa-user-circle" style="font-size: 5rem; color: #ccc;"></i>
+                <h3>John Doe</h3>
+                <p>user@example.com</p>
+            </div>
+
+            <div class="timeline-card" style="border-left-color: #666;">
+                <h4>Settings</h4>
+                <div style="margin-bottom: 10px;">
+                    <label>
+                        <input type="checkbox" checked onchange="localStorage.setItem('soundEnabled', this.checked)">
+                        Enable Alarm Sound 🎵
+                    </label>
+                </div>
+                <button class="primary-btn" style="background: #4facfe;" onclick="testAlarm()">🔊 Test Alarm
+                    Sound</button>
+            </div>
+
+            <div class="timeline-card" style="border-left-color: #666;">
+                <h4>Caregiver Details</h4>
+                <input type="text" placeholder="Caregiver Name">
+                <input type="tel" placeholder="Caregiver Phone">
+                <button class="primary-btn" style="background: #666;"
+                    onclick="alert('Caregiver Updated')">Update</button>
+            </div>
+
+            <button class="primary-btn" style="background: #ff4d4d; margin-top: 20px;"
+                onclick="logout()">Logout</button>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <a href="dashboard.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="medicine.html" class="nav-item">
+                <i class="fas fa-pills"></i>
+                <span>Medicines</span>
+            </a>
+            <a href="health_record.html" class="nav-item">
+                <i class="fas fa-file-medical"></i>
+                <span>Records</span>
+            </a>
+            <a href="profile.html" class="nav-item active">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </a>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

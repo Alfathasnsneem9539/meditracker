@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Medicines - CareSync</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="mobile-container">
+
+        <div class="header">
+            <h2>💊 Medicines</h2>
+            <button onclick="window.location.href='dashboard.html'"><i class="fas fa-arrow-left"></i></button>
+        </div>
+
+        <div class="content">
+            <!-- Add Medicine Section -->
+            <div class="form-container" id="add-med-form"
+                style="display:none; background:#f8f9fa; margin-bottom:20px; border-radius:12px;">
+                <h3>Add New Medicine</h3>
+                <input type="text" id="med-name" placeholder="Medicine Name">
+                <input type="text" id="med-dosage" placeholder="Dosage (e.g. 500mg)">
+                <label>Time to Take:</label>
+                <input type="time" id="med-time">
+                <label>Start Date:</label>
+                <input type="date" id="med-start-date">
+                <label>End Date:</label>
+                <input type="date" id="med-end-date">
+                <button class="primary-btn" onclick="saveMedicine()">Save Medicine</button>
+                <button class="primary-btn" style="background:#ccc; margin-top:5px;"
+                    onclick="toggleAddForm()">Cancel</button>
+            </div>
+
+            <!-- Add Medicine Button -->
+            <button class="primary-btn" onclick="toggleAddForm()" id="show-add-btn">+ Add New Medicine</button>
+
+            <div style="margin-top: 20px;">
+                <h3>My Medications</h3>
+                <div id="medicine-list">
+                    <!-- List will be populated by JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <a href="dashboard.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="medicine.html" class="nav-item active">
+                <i class="fas fa-pills"></i>
+                <span>Medicines</span>
+            </a>
+            <a href="health_record.html" class="nav-item">
+                <i class="fas fa-file-medical"></i>
+                <span>Records</span>
+            </a>
+            <a href="profile.html" class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </a>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

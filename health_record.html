@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Health Records - CareSync</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="mobile-container">
+
+        <div class="header">
+            <h2>📋 Records</h2>
+            <button onclick="window.location.href='dashboard.html'"><i class="fas fa-arrow-left"></i></button>
+        </div>
+
+        <div class="content">
+            <div class="form-container" style="padding: 0;">
+                <h3>New Entry</h3>
+                <input type="number" placeholder="Blood Pressure (e.g. 120/80)" id="bp">
+                <input type="number" placeholder="Sugar Level (mg/dL)" id="sugar">
+                <div style="display: flex; gap: 10px;">
+                    <input type="number" placeholder="Height (cm)" id="height">
+                    <input type="number" placeholder="Weight (kg)" id="weight">
+                </div>
+                <button class="primary-btn" onclick="alert('Record Saved (Mock)')">Save Record</button>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <h3>Recent History</h3>
+                <div class="timeline-card" style="margin-bottom: 10px; border-left-color: #28a745;">
+                    <h4>Checkup - Feb 10</h4>
+                    <p>BP: 120/80 | Sugar: 95</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <a href="dashboard.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="medicine.html" class="nav-item">
+                <i class="fas fa-pills"></i>
+                <span>Medicines</span>
+            </a>
+            <a href="health_record.html" class="nav-item active">
+                <i class="fas fa-file-medical"></i>
+                <span>Records</span>
+            </a>
+            <a href="profile.html" class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </a>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

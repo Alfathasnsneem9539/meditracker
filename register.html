@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Register - CareSync</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="align-items: center;">
+
+    <div class="mobile-container"
+        style="display: flex; flex-direction: column; justify-content: center; padding-bottom: 0;">
+        <div class="content" style="text-align: center;">
+            <h2 style="color: #4facfe;">Create Account</h2>
+
+            <div class="form-container">
+                <input type="text" id="name" placeholder="Full Name">
+                <input type="number" id="age" placeholder="Age">
+
+                <select id="gender">
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <input type="email" id="email" placeholder="Email">
+                <input type="password" id="password" placeholder="Password">
+
+                <button class="primary-btn" onclick="register()">Register New Account</button>
+
+                <p style="margin-top: 20px;">Already have an account?
+                    <a href="login.html" style="color: #4facfe; text-decoration: none; font-weight: bold;">Login</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

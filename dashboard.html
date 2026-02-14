@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CareSync - Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="mobile-container">
+
+        <!-- Header -->
+        <div class="header">
+            <h2>👋 Hello, User</h2>
+            <button onclick="logout()"><i class="fas fa-sign-out-alt"></i></button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+
+            <!-- Emergency SOS -->
+            <div class="timeline-card"
+                style="background: #ffe5e5; border-left-color: red; margin-bottom: 20px; cursor: pointer;"
+                onclick="alert('Calling Caregiver...')">
+                <h4 style="color: red;"><i class="fas fa-exclamation-circle"></i> Emergency SOS</h4>
+                <p>Tap to call caregiver immediately</p>
+            </div>
+
+            <!-- Medicine Timeline -->
+            <div class="timeline-section">
+                <h3>📅 Today's Schedule</h3>
+                <div id="medicine-timeline">
+                    <!-- Timeline Items will be injected here by JS -->
+                    <p style="text-align: center; color: #999;">Loading schedule...</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <a href="dashboard.html" class="nav-item active">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="medicine.html" class="nav-item">
+                <i class="fas fa-pills"></i>
+                <span>Medicines</span>
+            </a>
+            <a href="health_record.html" class="nav-item">
+                <i class="fas fa-file-medical"></i>
+                <span>Records</span>
+            </a>
+            <a href="profile.html" class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </a>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
